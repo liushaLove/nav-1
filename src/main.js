@@ -61,8 +61,9 @@ window.onbeforeunload = ()=>{
 $(document).on('keypress',(e)=>{
     const {key} = e;
     for (let i = 0; i < siteHashMap.length; i++) {
-        if (siteHashMap[i].logo.toLowerCase() === key) {
-          window.open(dataBaseObject[i].url)
+        let searchKey = siteHashMap[i].logo.toLowerCase();
+        if(searchKey === key){
+          window.open(dataBaseObject[i].url);
         }
-      }
+    }
 });

@@ -174,10 +174,17 @@ $(document).on('keypress', function (e) {
   var key = e.key;
 
   for (var i = 0; i < siteHashMap.length; i++) {
-    if (siteHashMap[i].logo.toLowerCase() === key) {
+    var searchKey = siteHashMap[i].logo.toLowerCase();
+
+    if (searchKey.length === 1 && searchKey === key) {
       window.open(dataBaseObject[i].url);
+    } else {
+      if (searchKey.indexOf("http") !== 0) {
+        searchKey = "https://" + searchKey;
+        window.open(searchKey);
+      }
     }
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.30400c07.js.map
+//# sourceMappingURL=main.ef5c95b6.js.map
