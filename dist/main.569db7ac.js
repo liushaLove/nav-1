@@ -176,15 +176,10 @@ $(document).on('keypress', function (e) {
   for (var i = 0; i < siteHashMap.length; i++) {
     var searchKey = siteHashMap[i].logo.toLowerCase();
 
-    if (searchKey.length === 1 && searchKey === key) {
+    if (searchKey === key) {
       window.open(dataBaseObject[i].url);
-    } else {
-      if (searchKey.indexOf("http") !== 0) {
-        searchKey = "https://" + searchKey;
-        window.open(searchKey);
-      }
     }
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.ef5c95b6.js.map
+//# sourceMappingURL=main.569db7ac.js.map
